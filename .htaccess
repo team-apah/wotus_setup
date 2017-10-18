@@ -1,0 +1,6 @@
+# Apache URL Rewrite Control
+RewriteEngine On
+# Serve Files in wotus_maps and static_maps
+RewriteCond %{REQUEST_URI} !^/(wotus|static)_maps/.*
+# Else run though Cahokia
+RewriteRule ^cahokia.*$ cahokia/cahokia.php [L,QSA]
